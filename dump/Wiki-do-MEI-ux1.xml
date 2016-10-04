@@ -1,0 +1,89 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.9/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.9/ http://www.mediawiki.org/xml/export-0.9.xsd" version="0.9" xml:lang="pt-br">
+  <siteinfo>
+    <sitename>Wiki-do-MEI</sitename>
+    <dbname>lw1345509222505</dbname>
+    <base>http://www.xmlfusion.org/wiki-do-mei/P%C3%A1gina_principal</base>
+    <generator>MediaWiki 1.24.1</generator>
+    <case>first-letter</case>
+    <namespaces>
+      <namespace key="-2" case="first-letter">Mídia</namespace>
+      <namespace key="-1" case="first-letter">Especial</namespace>
+      <namespace key="0" case="first-letter" />
+      <namespace key="1" case="first-letter">Discussão</namespace>
+      <namespace key="2" case="first-letter">Usuário</namespace>
+      <namespace key="3" case="first-letter">Usuário Discussão</namespace>
+      <namespace key="4" case="first-letter">Wiki-do-MEI</namespace>
+      <namespace key="5" case="first-letter">Wiki-do-MEI Discussão</namespace>
+      <namespace key="6" case="first-letter">Arquivo</namespace>
+      <namespace key="7" case="first-letter">Arquivo Discussão</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki Discussão</namespace>
+      <namespace key="10" case="first-letter">Predefinição</namespace>
+      <namespace key="11" case="first-letter">Predefinição Discussão</namespace>
+      <namespace key="12" case="first-letter">Ajuda</namespace>
+      <namespace key="13" case="first-letter">Ajuda Discussão</namespace>
+      <namespace key="14" case="first-letter">Categoria</namespace>
+      <namespace key="15" case="first-letter">Categoria Discussão</namespace>
+      <namespace key="3000" case="first-letter">doo</namespace>
+      <namespace key="3001" case="first-letter">doo talk</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Página principal</title>
+    <ns>0</ns>
+    <id>66</id>
+    <revision>
+      <id>857</id>
+      <parentid>506</parentid>
+      <timestamp>2016-02-03T12:44:31Z</timestamp>
+      <contributor>
+        <username>Peter</username>
+        <id>1</id>
+      </contributor>
+      <text xml:space="preserve" bytes="1583">[[Arquivo:FotoMosaicoMEI-juquia.jpg|420px|right]]
+&lt;center&gt;&lt;big&gt;'''Wiki-do-MEI'''&lt;/big&gt;&lt;br/&gt;
+Enciclopédia aberta dos modelos de contrato e dos processos realizados por&lt;br/&gt; [[Microempreendedores Individuais|'''M'''icro'''e'''mpreendedores '''I'''ndividuais]] (MEI) do Brasil. &lt;/center&gt;
+
+&amp;nbsp;
+
+* [[Atividades|Atividades profissionais permitidas]] &amp;#160;([[Atividades por setor|por setor]])
+* [[:Categoria:Serviço_típico|Serviços típicos]] &amp;#160; - &amp;#160; [[:Categoria:Serviço_agregado|Serviços agregados]]
+* [[Modelos de contrato]] (MEI com cliente)
+
+&lt;!-- * [[Terminologia]] empregada nos contratos e [[Wiki-do-MEI|nesta Wiki]] * [[Modelos de contrato encadeados|Contratos em uma cadeia de suprimentos]] (diversos MEIs com um cliente) --&gt;
+
+-----
+
+Colabore com  a Wiki-do-MEI!  Passo-a-passo, é simples:
+
+# '''Descrever (ou revisar) uma [[Atividade]]'''. Por exemplo: {{ativ|Organizador(a) de Excursões em Veículo Próprio, Municipal}}
+# '''Descrever (ou revisar) um ou mais [[Serviços#Servi.C3.A7os_t.C3.ADpicos|serviços típicos]] da ''atividade'''''. Exemplo: [[Serviço/492/Transporte turístico rodoviário municipal|Transporte turístico rodoviário municipal]].
+# '''Criar (ou revisar) um [[Contratos|''modelo de contrato'']] básico''' para esse ''serviço típico'': Exemplo: [[Serviço/492/Transporte turístico rodoviário municipal/Cntrt|Contrato entre o MEI e o seu cliente no serviço de transporte turístico rodoviário municipal]].
+ 
+-----
+
+Esta Wiki está em construção: [[EXEMPLOS|confira os EXEMPLOS]] para entender melhor o que pretendemos oferecer.</text>
+      <sha1>fcmo50li9ls77zj6ce5bvraysolxf2i</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+  <page>
+    <title>Predefinição:Ativ</title>
+    <ns>10</ns>
+    <id>89</id>
+    <revision>
+      <id>192</id>
+      <timestamp>2015-01-21T01:01:49Z</timestamp>
+      <contributor>
+        <username>Peter</username>
+        <id>1</id>
+      </contributor>
+      <comment>Criou página com '[[Atividade/{{{1}}}|{{{1}}}]]'</comment>
+      <text xml:space="preserve" bytes="29">[[Atividade/{{{1}}}|{{{1}}}]]</text>
+      <sha1>01veg7cckp2j98e8e7acrxfey2exto8</sha1>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+    </revision>
+  </page>
+</mediawiki>

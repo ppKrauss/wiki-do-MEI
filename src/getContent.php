@@ -8,6 +8,7 @@ $md->paglstGetXml(true,['outpag'=>'01','apprefix'=>'Atividade']);
 $md->paglstGetXml(true,['outpag'=>'02','apprefix'=>'Serviço']);
 $md->paglstGetXml(true,['outpag'=>'03','apprefix'=>'Wiki']);
 $md->paglstGetXml(true,['outpag'=>'04','apprefix'=>'Contrato']);
+//Página_principal
 
 // or other as https://www.mediawiki.org/wiki/Manual:Namespace
 $md->paglstGetXml(true,['outpag'=>'05','apnamespace'=>'10']); // templates
@@ -16,20 +17,26 @@ $md->paglstGetXml(true,['outpag'=>'07','apnamespace'=>'14']); // categories
 $md->paglstGetXml(true,['outpag'=>'08','apnamespace'=>'15']);
 $md->paglstGetXml(true,['outpag'=>'09','apnamespace'=>'3000']);
 $md->paglstGetXml(true,['outpag'=>'10','apnamespace'=>'3001']);
+$md->paglstGetXml(true,['outpag'=>'11','apnamespace'=>'2']); // user
+$md->paglstGetXml(true,['outpag'=>'12','apnamespace'=>'3']);
 
 print "\n  ---\n";
 
 //$md->pagGetXml();
-$md->paglstGetLst();
+$md->paglstGetLst(); // ver array com nomes (title usa prefixo do ns)
+// falta colerar o export XML desejado
+// ignorar users estranhos 
+// rodar post de requisição do dump completo de N páginas
 
 print "\n";
 
 //////////////
 class MediawikiDump {
 
-  public $url_wiki = 'http://www.xmlfusion.org/wiki-do-mei';
+  public $url_wiki  = 'http://www.xmlfusion.org/wiki-do-mei';
   public $dump_path = __DIR__.'/../dump';  // 'dump/imgs', etc.
-  public $imgsXml = NULL;
+  public $imgsXml   = NULL;
+  public $paglst    = NULL;
 
   function __construct($refresh=false) {
     $this->dump_path = realpath($this->dump_path);
@@ -116,13 +123,22 @@ class MediawikiDump {
 
   public function paglstGetLst() {
     $lst = "{$this->dump_pagsFile}*.xml";
-    echo "\n$lst\n";
-    foreach (glob("{$this->dump_pagsFile}*.xml") as $f) {
-      //echo "\n-- from $f:";
+    echo "\n list of $lst... ";
+    $this->paglst = [];
+    foreach (glob($lst) as $f) {
+      echo "\n-- from $f:";
       $sdom = simplexml_load_file($f);
-      foreach($sdom->query->allpages->p as $d)
-        echo "\n$d[title]";
-    } //for
+      $n=0;
+      foreach($sdom->query->allpages->p as $d) {
+        $this->paglst[ (string) $d['pageid'] ] = [
+          'ns'=> (int) $d['ns'],
+          'title'=> (string) $d['title']
+        ];
+        $n++;
+      } // for p
+      echo " $n records";
+    } //for files
+    var_dump($this->paglst);
   }
 
 } // class
